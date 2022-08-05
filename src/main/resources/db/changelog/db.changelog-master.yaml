@@ -1,0 +1,14 @@
+databaseChangeLog: #параметр в котором находятся миграции
+  - changeSet:
+      id: createAttendanceByStudents
+      author: postgres
+      validCheckSum: any
+      runAlways: true
+      changes:
+        - sqlFile:
+            encoding: utf8
+            path: changeset/simple-function.sql
+            relativeToChangelogFile: true
+            splitStatements: false
+            stripComments: false
+            endDelimiter: \nGO
